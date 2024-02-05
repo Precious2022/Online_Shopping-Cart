@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1>ShOppingCart</h1>
+                </div>
+                <div class="cart__counter">
+                    <i class="fa fa-shopping-cart"></i><span id="total__counter">0</span>
+                </div>
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Search products" />
+                    <button class="btn" onclick="searchProducts()">Search</button>
+                </div>
+            </nav>
+            <div class="cart">
+                <div class="cart__items">
+                    <div class="check_out">
+                        <h4>Total Ammount : R</h4><h4 class="total__cost">0</h4>
+                        <button class="btn check_out_btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="products">
+          <div class="product__element">
+            <input type="hidden" name="" id="product__id" value="1" />
+            <img src="img/nike2.jpg" alt="" srcset="" id="image" />
+            <h4 class="product__name">Nike Color</h4>
+            <h5 class="product__price">R900.00</h5>
+            <div class="btn__add__to__cart">Add To Cart</div>
+          </div>
+          <div class="product__element">
+            <input type="hidden" name="" id="product__id" value="2" />
+            <img src="img/full.jpg" alt="" srcset="" id="image" />
+            <h4 class="product__name">Nike Pener</h4>
+            <h5 class="product__price">R850.00</h5>
+            <div class="btn__add__to__cart">Add To Cart</div>
+          </div>
+          <div class="product__element">
+            <input type="hidden" name="" id="product__id" value="3" />
+            <img src="img/puma.jpg" alt="" srcset="" id="image" />
+            <h4 class="product__name">Nike Somar</h4>
+            <h5 class="product__price">R700.00</h5>
+            <div class="btn__add__to__cart">Add To Cart</div>
+          </div>
+        </div>
+      </div>
+
+        <div class="payment-section">
+            <h2>Payment Method</h2>
+            <label for="paymentMethod">Select Payment Method:</label>
+            <select id="paymentMethod">
+                <option value="creditCard">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </div>
+
+        <div class="signup-section">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required />
+                <label for="password">Password:</label>
+                <input type="password" id="password" required />
+                <button type="button" class="btn" onclick="signUp()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
